@@ -106,7 +106,12 @@
   - dimension: zip
     type: string
     sql: ${TABLE}.zip
-
+    
+  - dimension: location
+    type: location
+    sql_latitude: ${TABLE}.Lat
+    sql_longitude: ${TABLE}.Long1
+    
   - measure: count
     type: count
     drill_fields: [id, name]
